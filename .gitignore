@@ -1,0 +1,72 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Dependency directories
+/bower_components
+
+# Optional npm cache directory
+.npm
+
+# IDE or Editor specific
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+/dist
+/build
+/out
+
+# Test coverage
+/coverage
+
+# Temporary files
+/tmp
+*.tmp
+*.temp
+*.pid
+*.gz
+
+# Miscellaneous
+*.log
+*.lock
+*.swp
+
+# Yarn Integrity file
+.yarn-integrity
+
+# React-specific (if using React for frontend)
+client/node_modules/
+client/build/
+
+# SASS Cache
+.sass-cache
+
+# Optional lock files
+package-lock.json
+yarn.lock
+
+# ESLint cache
+.eslintcache
+
+# TypeScript (if using TypeScript)
+*.tsbuildinfo
