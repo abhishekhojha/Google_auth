@@ -7,7 +7,11 @@ dotenv.config()
 const app = express()
 app.use(express.json())
 app.use(cors())
+
+//Auth Route Start 
 app.use("/",AuthRoute)
+//Auth Route End
+
 app.get("/",(req,res)=>{
     res.send("dont access this")
 })
