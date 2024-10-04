@@ -1,8 +1,13 @@
-const requireRole = (role) => {
+exports.hasRole = (role) => {
     return (req, res, next) => {
-        if (req.user.role !== role) {
-            return res.status(403).json({ message: "Access Denied" });
+        if (!req.isAuthenticated()) {
+            return res.status(401).json({ message: 'Unauthorized: User not authenticated' });
         }
-        next();
+
+        if (req.user.role !== role) {
+            return res.status(403).json({ message: 'Forbidden: Access denied' });
+        }
+
+        return next();
     };
 };
