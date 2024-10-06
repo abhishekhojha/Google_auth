@@ -10,17 +10,8 @@ async function Login(req, res, next) {
             return res.status(401).json({ message: "Invalid Credential or user denied access" })
         req.logIn(userData, (err) => {
             if (err)
-                return res.status(500).json({ message: err })
+                res.redirect("http://localhost:3000/error?err="+err)
             return res.redirect("http://localhost:3000/dash?name="+userData.name)
-            // return res.redirect(process.env.CLIENT_URL+"/dash?name="+userData.name)
-            // .json({
-            //     message: 'Login successful',
-            //     user: {
-            //         name: userData.name,
-            //         email: userData.email,
-            //         role: userData.role,
-            //     }
-            // })
         })
     })(req, res, next)
 }
